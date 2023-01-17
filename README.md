@@ -13,7 +13,7 @@ conda create -p venv python==3.7 -y
 
 ...
 
-Step for data preprocessing, data visualization, model building and coamparing of deifferent models:
+### Step for data preprocessing, data visualization, model building and coamparing of deifferent models:
 
 1. Import important libraries
 2. Open dataset

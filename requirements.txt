@@ -4,4 +4,5 @@ numpy
 sklearn
 seaborn
 matplotlib
+xgboost
 gunicorn
