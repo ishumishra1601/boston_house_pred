@@ -1,8 +1,10 @@
 import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
-
+import sklearn as sk
 import numpy as np
 import pandas as pd
+#from sklearn.preprocessing import StandardScaler
+#scaler = StandardScaler()
 
 app=Flask(__name__)
 ## Load the model
@@ -31,7 +33,7 @@ def predict():
     final_input=scalar.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output= regmodel.predict(final_input)[0]
-    return render_template("home.html", prediction_text="The House Proce Prediction is {}".format(output))
+    return render_template("home.html", prediction_text="The House Price Prediction is {} thousand dollars".format(output))
 
 
 if __name__=="__main__":
